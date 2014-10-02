@@ -1,0 +1,74 @@
+<!--
+A sample google maps link to a particular lat/long
+
+Google maps API
+	https://developers.google.com/maps/documentation/javascript/tutorial
+
+http://maps.google.com/maps?q=37.7090273,-84.2910833
+
+This seems to work for setting zoom...
+http://www.google.com/maps/place/@37.7090273,-84.2910833,11z
+http://stackoverflow.com/questions/18582066/how-to-calculate-zoom-url-parameter-at-the-google-maps-preview-new-version-gm
+http://stackoverflow.com/questions/22939725/why-has-google-maps-q-parameter-stopped-working
+
+Sunrise
+http://icons.iconarchive.com/icons/icons8/windows-8/512/Weather-Sunset-icon.png
+
+Camera
+ion-camera,ion-ios7-camera
+
+-->
+<style type="text/css">
+	.icon-block{
+		display:inline-block;
+		width:18px;
+		font-size: 12pt;
+	}
+</style>
+<ion-view title="{{photoop.name}}">
+  <ion-content has-header="true" padding="true">
+  <p>
+  	<img ng-src="{{photoop.image}}"><br>
+  	{{photoop.description}}
+  </p>
+
+<!-- 	<p>
+		<span class="icon-block ion-clock"></span> {{photoop.datetime|date:'short'}}<br>
+		<span class="icon-block ion-map"></span> {{photoop.latitude}}, {{photoop.longitude}} 
+			[<a href="http://www.google.com/maps/place/@{{photoop.latitude}},{{photoop.longitude}},11z" target="_blank">Map</a>]
+	</p>
+
+	<p>
+	  	<span class="icon-block ion-umbrella icon-block"></span> {{photoop.weather}}<br>
+	  	<span class="icon-block ion-thermometer"></span> {{photoop.temperature}}<br>
+	  	<span class="icon-block ion-speedometer"></span> {{photoop.humidity}} / {{photoop.pressure}}mmHg<br>
+	  	<span class="icon-block ion-ios7-sunny"></span> {{photoop.sunrise|date:'mediumTime'}} -&gt; {{photoop.sunset|date:'mediumTime'}}<br>
+	  	<span class="icon-block ion-flag" x-alt-class="ion-navigate"></span> {{photoop.windspeed}}
+	</p> -->
+
+	<div class="list card">
+		<i class="ion-clock"></i> {{photoop.datetime|date:'short'}}<br>
+		<i class="ion-map"></i> {{photoop.latitude}}, {{photoop.longitude}} 
+			[<a href="http://www.google.com/maps/place/@{{photoop.latitude}},{{photoop.longitude}},11z" target="_blank">Map</a>]
+	</div>
+
+	<div class="list card">
+		<div class="item item-icon-left">
+		  <i class="icon-block ion-umbrella icon-block"></i> {{photoop.weather}}
+		</div>
+		<div class="item item-icon-left">
+	  	<i class="icon-block ion-thermometer"></i> {{photoop.temperature}}<br>
+		</div>
+		<div class="item item-icon-left">
+	  	<i class="icon-block ion-speedometer"></i> {{photoop.humidity}} / {{photoop.pressure}}mmHg<br>
+		</div>
+		<div class="item item-icon-left">
+	  	<i class="icon-block ion-ios7-sunny"></i> {{photoop.sunrise|date:'mediumTime'}} -&gt; {{photoop.sunset|date:'mediumTime'}}<br>
+		</div>
+		<div class="item item-icon-left">
+	  	<i class="icon-block ion-flag" x-alt-class="ion-navigate"></i> {{photoop.windspeed}}
+		</div>
+	</div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,9 @@
+<ion-view title="Photo Opportunities">
+  <ion-content>
+      <ion-item ng-repeat="photoop in photoops" type="item item-thumbnail-right" x-type="item-text-wrap" href="#/tab/photoop/{{photoop.id}}" class="item-thumbnail-left">
+		<img ng-src="{{photoop.image}}" width="100">
+		<h2>{{photoop.name}}</h2>
+	  </ion-item>
+  	</div>
+  </ion-content>
+</ion-view>
