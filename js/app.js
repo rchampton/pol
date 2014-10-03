@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('pol', ['ionic', 'pol.controllers', 'pol.services'])
 
-.run(function($ionicPlatform, $localStorage) {
+.run(function($ionicPlatform, $localStorage, $http) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -23,6 +23,11 @@ angular.module('pol', ['ionic', 'pol.controllers', 'pol.services'])
     }else{
       console.log('Loaded test');
     }
+
+    // http://stackoverflow.com/questions/19423347/angularjs-http-get-verify-valid-json
+    // http://stackoverflow.com/questions/18147126/angularjs-http-and-transformresponse
+    $http.defaults.transformResponse=[];
+    $http.get('data/op-1.json').success(function(d){console.log('data ' + d)});
   });
 })
 
