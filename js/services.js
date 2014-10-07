@@ -49,28 +49,23 @@ angular.module('pol.services', [])
 // Sample weather svc call to http://openweathermap.org/
 // http://api.openweathermap.org/data/2.5/weather?q=richmond,ky&callback=test
 .factory('Photoops', function($http){
-console.log('Inside Photoops factory');
   // Some fake testing data
-  var hasBeenLoaded=false;
   var photoops=[];
   var loadq=$http.get('data/samples.json').success(function(d){
-console.log('loadq success firing');
       for(var i=0, max=d.length; i<max; i++)
         photoops.push(d[i]);
       // $scope.dataLoaded=true;
     }).error(function(d){
       console.log('An error occurred loading samples ' + d);
-    }).finally(function(){
-      hasBeenLoaded=true;
-      console.log('finally ' + hasBeenLoaded);
     });
 
   return{
     loadq: loadq
-    , getLoadQ: function(){ return loadq; }
-    , hasBeenLoaded: function(){return hasBeenLoaded;}
     , all: function(){
       return photoops;
+    }
+    , add: function(newPhotoop){
+      console.debug('TODO add Photoop')
     }
     , get: function(photoopId){
       return photoops[photoopId];
