@@ -64,6 +64,24 @@ angular.module('pol.services', [])
     , all: function(){
       return photoops;
     }
+    , create: function(){
+      return {
+        "id": 0
+        , "name": ""
+        , "description": ""
+        , "latitude": 0
+        , "longitude": 0
+        , "datetime": Date.now()
+        , "temperature": 0
+        , "humidity": 0
+        , "pressure": 0
+        , "windspeed": 0
+        , "sunrise": 0
+        , "sunset": 0
+        , "weather": ""
+        , "image": ""
+      };
+    }
     , add: function(newPhotoop){
       console.debug('TODO add Photoop')
     }

@@ -1,0 +1,41 @@
+<style type="text/css">
+	.icon-block{
+		display:inline-block;
+		width:18px;
+		font-size: 12pt;
+	}
+</style>
+<ion-view title="Add Photo Opportunity">
+  <ion-content has-header="true" padding="true">
+  <h2>Add +++++++++</h2>
+  <p>
+  	<img ng-src="{{photoop.image}}"><br>
+  	{{photoop.description}}
+  </p>
+
+	<div class="list card">
+		<i class="ion-clock"></i> {{photoop.datetime|date:'short'}}<br>
+		<i class="ion-map"></i> {{photoop.latitude}}, {{photoop.longitude}} 
+			[<a href="http://www.google.com/maps/place/@{{photoop.latitude}},{{photoop.longitude}},11z" target="_blank">Map</a>]
+	</div>
+
+	<div class="list card">
+		<div class="item item-icon-left">
+		  <i class="icon-block ion-umbrella icon-block"></i> {{photoop.weather}}
+		</div>
+		<div class="item item-icon-left">
+	  	<i class="icon-block ion-thermometer"></i> {{photoop.temperature}}<br>
+		</div>
+		<div class="item item-icon-left">
+	  	<i class="icon-block ion-speedometer"></i> {{photoop.humidity}} / {{photoop.pressure}}mmHg<br>
+		</div>
+		<div class="item item-icon-left">
+	  	<i class="icon-block ion-ios7-sunny"></i> {{photoop.sunrise|date:'mediumTime'}} -&gt; {{photoop.sunset|date:'mediumTime'}}<br>
+		</div>
+		<div class="item item-icon-left">
+	  	<i class="icon-block ion-flag" x-alt-class="ion-navigate"></i> {{photoop.windspeed}}
+		</div>
+	</div>
+
+  </ion-content>
+</ion-view>

@@ -1,6 +1,6 @@
 angular.module('pol.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('HomeCtrl', function($scope) {
 })
 
 .controller('PhotoopsCtrl', function($scope, Photoops){
@@ -16,6 +16,9 @@ angular.module('pol.controllers', [])
 })
 .controller('PhotoopDetailCtrl', function($scope, $stateParams, Photoops){
 	$scope.photoop=Photoops.get($stateParams.photoopId);
+})
+.controller('PhotoopAddCtrl', function($scope, $stateParams, Photoops){
+	console.log('PhotoopAddCtrl entered');
 })
 
 .controller('FriendsCtrl', function($scope, Friends) {

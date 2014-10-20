@@ -1,16 +1,17 @@
 <ion-view title="Photo Opportunities">
   <ion-content>
+		<div ng-hide="dataLoaded">
+			<i class="ion-loading-a"></i>
+		</div>
 	  <ion-item ng-show="dataLoaded" ng-repeat="photoop in photoops" type="item item-thumbnail-right" href="#/tab/photoop/{{photoop.id}}" class="item-thumbnail-left">
 		<img ng-src="{{photoop.image}}" width="100">
 		<h2>{{photoop.name}}</h2>
 	  </ion-item>
-		<div ng-hide="dataLoaded">
-			<i class="ion-loading-a"></i>
-		</div>
-		<div class="item item-button-right">
-			<button class="button button-positive">
-				<i class="icon ion-plus"></i>
-			</button>
-		</div>
+	  <ion-item href="#/tab/photoop-add">
+		<button class="button button-positive">
+			<i class="icon ion-plus"></i>
+		</button>
+		<h2>Add</h2>
+	</ion-item>
   </ion-content>
 </ion-view>
