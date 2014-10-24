@@ -18,14 +18,11 @@ angular.module('pol.controllers', [])
 	$scope.photoop=Photoops.get($stateParams.photoopId);
 })
 .controller('PhotoopAddCtrl', function($scope, $stateParams, Photoops){
-	console.log('PhotoopAddCtrl entered');
-})
-
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+	console.log('entered AddCtrl');
+	$scope.name='ss';
+	$scope.btnSave=function(){
+		console.debug('btnSave clicked, name is ' + $scope.name);
+	};
 })
 
 .controller('AccountCtrl', function($scope) {

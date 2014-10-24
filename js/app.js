@@ -68,28 +68,9 @@ angular.module('pol', ['ionic', 'pol.controllers', 'pol.services'])
     .state('tab.photoop-add', {
       url: '/photoop-add'
       , views: {
-        'tab-photoop':{
+        'tab-photoops':{
           templateUrl: 'templates/photoop-add.html'
           , controller: 'PhotoopAddCtrl'
-        }
-      }
-    })
-
-    .state('tab.friends', {
-      url: '/friends',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
-        }
-      }
-    })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
         }
       }
     })
