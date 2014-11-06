@@ -1,5 +1,11 @@
 <ion-view title="Photo Opportunities">
   <ion-content>
+	  <ion-item href="#/tab/photoop-add">
+		<button class="button button-positive">
+			<i class="icon ion-plus"></i>
+		</button>
+		<h2>Add</h2>
+	</ion-item>
 		<div ng-hide="dataLoaded">
 			<i class="ion-loading-a"></i>
 		</div>
@@ -7,11 +13,5 @@
 		<img ng-src="{{photoop.image}}" width="100">
 		<h2>{{photoop.name}}</h2>
 	  </ion-item>
-	  <ion-item href="#/tab/photoop-add">
-		<button class="button button-positive">
-			<i class="icon ion-plus"></i>
-		</button>
-		<h2>Add</h2>
-	</ion-item>
   </ion-content>
 </ion-view>

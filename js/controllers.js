@@ -17,13 +17,12 @@ angular.module('pol.controllers', [])
 .controller('PhotoopDetailCtrl', function($scope, $stateParams, Photoops){
 	$scope.photoop=Photoops.get($stateParams.photoopId);
 })
-.controller('PhotoopAddCtrl', function($scope, $stateParams, Photoops){
+.controller('PhotoopAddCtrl', ['$scope', function($scope, $stateParams, Photoops){
 	console.log('entered AddCtrl');
-	$scope.name='ss';
 	$scope.btnSave=function(){
-		console.debug('btnSave clicked, name is ' + $scope.name);
+		console.debug('photoop.name is ' + $scope.photoop.name,'\n',$scope.photoop.description);
 	};
-})
+}])
 
 .controller('AccountCtrl', function($scope) {
 });

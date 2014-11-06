@@ -58,7 +58,7 @@ angular.module('pol.services', [])
       };
     }
     , add: function(newPhotoop){
-      console.debug('TODO add Photoop')
+      console.debug('TODO add Photoop');
     }
     , get: function(photoopId){
       return photoops[photoopId];

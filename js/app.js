@@ -70,7 +70,7 @@ angular.module('pol', ['ionic', 'pol.controllers', 'pol.services'])
       , views: {
         'tab-photoops':{
           templateUrl: 'templates/photoop-add.html'
-          , controller: 'PhotoopAddCtrl'
+          , controller: 'PhotoopAddCtrl as photoop'
         }
       }
     })
